@@ -3,16 +3,16 @@ server:
 spring:
   thymeleaf:
     cache: false
-    prefix: file:src/main/resources/templates/
+    prefix: classpath:/templates/ # file 경로 대신 classpath 사용
   devtools:
     livereload:
       enabled: true
     restart:
       enabled: true
   datasource:
-    url: jdbc:mariadb://127.0.0.1:3306/nine_db?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;serverTimezone=Asia/Seoul
+    url: jdbc:mariadb://127.0.0.1:3306/nine_db?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul
     username: root
-    password:
+    password: # 비밀번호 입력이 필요한 경우 여기에 입력
   jpa:
     hibernate:
-      ddl-auto: update # DB 스키마 자동생성, 앱이 재실행되어도 데이터는 유지된다.
+      ddl-auto: update
