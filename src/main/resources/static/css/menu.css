@@ -1,0 +1,182 @@
+/* 기본 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  overflow: auto;
+  position: relative;
+}
+
+/* 메뉴 제목 */
+.menu-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #f0f0f0;
+}
+/* 메인 콘텐츠 */
+.main-content {
+  width: calc(100% - 600px); /* 사이드바 너비(300px) + 오른쪽 간격(300px) 제외 */
+  max-width: calc(100% - 600px); /* 최대 너비 설정 */
+  margin-left: 300px; /* 왼쪽 사이드바 공간 확보 */
+  margin-right: 300px; /* 오른쪽 간격 맞춤 */
+  padding: 20px; /* 내부 여백 */
+  transition: margin-left 0.3s ease; /* 사이드바 열릴 때 부드러운 이동 */
+}
+
+/* 메뉴 리스트 */
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* 메뉴 아이템 간격 */
+  width: 100%; /* 부모 요소의 전체 너비 사용 */
+  margin-top: 40px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  width: 100%; /* 전체 너비 사용 */
+  border-bottom: 1px solid #444;
+}
+
+/* 사진 컨테이너 스타일 */
+.container {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  transition: all 0.1s;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(105deg,
+    transparent 40%,
+    rgba(255, 94, 77, 0.8) 45%, /* 옅은 주황색 */
+    rgba(153, 0, 0, 0.6) 50%,   /* 딥 레드 */
+    transparent 54%);
+  filter: brightness(1.1) opacity(0.8);
+  mix-blend-mode: color-dodge;
+  background-size: 150% 150%;
+  background-position: 100%;
+  transition: all 0.1s;
+}
+
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* 점 스타일 */
+.menu-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.menu-dots span {
+  font-size: 1.5em;
+  color: #f0f0f0;
+  margin: 0 8px; /* 각 점 사이 간격을 넓힘 */
+}
+
+/* 가격 스타일 */
+.menu-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #f0f0f0;
+  padding-right: 20px;
+  text-align: right;
+}
+
+/* 사이드바 */
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    height: 100%;
+    transition: left 0.3s;
+    overflow: hidden;
+}
+.sidebar.open {
+    left: 0;
+}
+
+/* 토글 버튼 스타일 */
+.sidebar-toggle {
+    background-color: #333;
+    color: #f0f0f0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    z-index: 1000;
+}
+.sidebar.open .sidebar-toggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+}
+.sidebar-toggle:hover {
+    background-color: #555;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 20px; /* 폰트 크기 */
+    font-weight: bold; /* 폰트 두께 */
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* 색 변환과 크기 변화를 부드럽게 */
+}
+
+.sidebar a:hover {
+    background-color: #555; /* 배경색 변화 */
+    color: #ffffff; /* 글자색 강조 */
+    transform: scale(1.05); /* 살짝 확대 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* 약간의 그림자 추가 */
+}
+
+/* 사이드바 안 로고 스타일 */
+.sidebar-logo {
+    text-align: center;
+    margin-top: 200px;
+}
+.sidebar-logo img {
+    max-width: 80px;
+    border-radius: 50%;
+    margin-top: 20px;
+}

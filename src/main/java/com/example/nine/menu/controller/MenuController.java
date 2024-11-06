@@ -22,7 +22,7 @@ public class MenuController {
     public String showMenuPage(Model model) {
         List<MenuItem> menuItems = menuService.getAllMenuItems();
         model.addAttribute("menuItems", menuItems);
-        return "menu";
+        return "menu/menu";
     }
 
     @GetMapping("/{id}")
