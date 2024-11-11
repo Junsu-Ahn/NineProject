@@ -11,6 +11,7 @@
 <!-- 사이드바 -->
 <div class="sidebar" id="sidebar">
     <button class="sidebar-toggle" onclick="toggleSidebar()">☰ 메뉴</button>
+    <a href="/">홈</a>
     <a href="/menu">메뉴 소개</a>
     <a href="/location">찾아오시는 길</a>
     <a href="/reservation">예약</a>
@@ -21,43 +22,82 @@
 
 <!-- 메인 콘텐츠 -->
 <div class="main-content">
+
     <!-- 메뉴 제목 -->
     <div class="menu-title">
         Menu
     </div>
 
+    <!-- 메뉴 카테고리 바 -->
+    <div class="menu-category-bar">
+        <button onclick="filterMenu('all')">전체</button>
+        <button onclick="filterMenu('meat')">고기류</button>
+        <button onclick="filterMenu('meal')">식사류</button>
+        <button onclick="filterMenu('wine')">와인류</button>
+    </div>
+
     <!-- 메뉴 리스트 -->
     <div class="menu-list">
-        <div class="menu-item">
+        <div class="menu-item meat">
             <div class="menu-photo container">
                 <div class="overlay"></div>
-                <div class="card" style="background-image: url('/images/menu1.jpg');"></div>
+                <div class="card" style="background-image: url('/images/꽃등심.jpeg');"></div>
             </div>
-            <div class="menu-dots">
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
+
+            <!-- 메뉴 설명과 가격 정보 -->
+            <div class="menu-info">
+                <div class="item-title">
+                    꽃등심 <span class="weight">150g</span>
+                    <span class="label">대표</span>
+                </div>
+                <div class="item-details">
+                    1++ <span class="order-note">(2인분 단위 주문 가능)</span>
+                </div>
+                <div class="menu-price">₩45,000</div>
             </div>
-            <div class="menu-price">₩12,000</div>
         </div>
 
-        <div class="menu-item">
+        <div class="menu-item meal">
             <div class="menu-photo container">
                 <div class="overlay"></div>
-                <div class="card" style="background-image: url('/images/menu2.jpg');"></div>
+                <div class="card" style="background-image: url('/images/된장.jpg');"></div>
             </div>
-            <div class="menu-dots">
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
+
+            <!-- 메뉴 설명과 가격 정보 -->
+            <div class="menu-info">
+                <div class="item-title">
+                    된장찌개 <span class="weight">1인분</span>
+                </div>
+                <div class="item-details">
+                    추천 <span class="order-note">(추가 반찬 제공 가능)</span>
+                </div>
+                <div class="menu-price">₩15,000</div>
             </div>
-            <div class="menu-price">₩15,000</div>
         </div>
-        <!-- 더 많은 메뉴 항목 추가 가능 -->
-    </div>
+
+        <div class="menu-item wine">
+            <div class="menu-photo container">
+                <div class="overlay"></div>
+                <div class="card" style="background-image: url('/images/와인.jpg');"></div>
+            </div>
+
+            <!-- 메뉴 설명과 가격 정보 -->
+            <div class="menu-info">
+                <div class="item-title">
+                    와인 세트 <span class="weight">750ml</span>
+                    <span class="label">인기</span>
+                </div>
+                <div class="item-details">
+                    레드 와인 <span class="order-note">(1병 단위)</span>
+                </div>
+                <div class="menu-price">₩20,000</div>
+            </div>
+        </div>
+
 </div>
 
 <script src="/js/home.js"></script>
 <script src="/js/effect.js"></script> <!-- 3D 효과를 위한 스크립트 -->
+
 </body>
 </html>
