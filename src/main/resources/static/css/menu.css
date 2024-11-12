@@ -110,6 +110,7 @@ body {
   height: 250px;
   position: relative;
   transition: all 0.1s;
+  border-radius: 10px; /* 사진 모서리 둥글게 */
 }
 
 .overlay {
@@ -126,6 +127,7 @@ body {
   background-size: 150% 150%;
   background-position: 100%;
   transition: all 0.1s;
+  border-radius: 10px; /* 사진 모서리 둥글게 */
 }
 
 
@@ -134,6 +136,7 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
+  border-radius: 10px; /* 사진 모서리 둥글게 */
 }
 
 /* 점 스타일 */
@@ -241,6 +244,7 @@ body {
     width: 100%; /* 메인 콘텐츠에 맞게 전체 너비 사용 */
     margin-top: 20px; /* 메뉴 제목과의 간격 */
     margin-bottom: 20px; /* 메뉴 리스트와의 간격 */
+    gap: 10px;
 }
 
 /* 카테고리 버튼 스타일 */
@@ -256,10 +260,10 @@ body {
     transition: background-color 0.3s, transform 0.2s ease;
     text-align: center;
 
-    flex-grow: 1; /* 여유 공간을 균등하게 차지하도록 설정 */
-    flex-basis: 88px; /* 버튼의 기본 너비 설정 */
-    height: 41.5px; /* 버튼의 고정된 높이 설정 */
-    max-width: 88px; /* 버튼이 더 이상 커지지 않도록 최대 너비 제한 */
+    flex-grow: 1;
+    flex-basis: 95px; /* 버튼 기본 너비 증가 */
+    height: 41.5px;
+    max-width: 120px; /* 최대 너비 증가 */
 }
 
 

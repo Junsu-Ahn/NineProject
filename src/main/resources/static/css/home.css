@@ -108,11 +108,11 @@ body {
     align-items: flex-start;
     gap: 20px;
     margin-top: 50px; /* 컨테이너의 전체 상단 여백 */
-    margin-left: 350px;
+    margin-left: 300px;
 }
 .description {
     flex: 2;
-    width: 600px; /* 원하는 고정된 너비 */
+    width: 700px; /* 원하는 고정된 너비 */
     height: 1000px; /* 원하는 고정된 높이 */
     text-align: center;
     display: flex;
@@ -121,7 +121,7 @@ body {
     background-color: #333;
     border-radius: 8px;
     padding: 0;
-    margin-left: 400px
+    margin-left: 0px
     margin-right: 20px; /* 오른쪽으로 이동 */
 
     margin-top: 0; /* 가게 전경 사진과 같은 높이로 조정 */
